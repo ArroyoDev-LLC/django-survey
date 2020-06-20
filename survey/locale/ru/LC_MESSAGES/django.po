@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-09 04:01+0000\n"
+"POT-Creation-Date: 2020-06-20 12:16+0000\n"
 "PO-Revision-Date: 2019-03-10 22:53+0230\n"
 "Last-Translator: b'  <vladm.ru@gmail.com>'\n"
 "Language-Team: \n"
@@ -37,110 +37,6 @@ msgstr[1] "опросы %(count)d помечены как опубликован
 #: survey/actions.py:20
 msgid "Mark selected surveys as published"
 msgstr "Помечено как опублиовано"
-
-#: survey/exporter/csv/survey2csv.py:38
-msgid "Anonymous"
-msgstr "Анонимно"
-
-#: survey/exporter/csv/survey2csv.py:71
-msgid "user"
-msgstr ""
-
-#: survey/exporter/csv/survey2csv.py:115
-msgid "Export to CSV"
-msgstr ""
-
-#: survey/exporter/tex/question2tex.py:64
-msgid "with"
-msgstr "с"
-
-# there is a mistake in the EN singular and plural cases.
-# Entrevistado reffers to all surveyed.
-#: survey/exporter/tex/question2tex.py:66
-#, python-format
-msgid "%(min_cardinality)d respondants or more"
-msgid_plural "%(min_cardinality)d respondant or more"
-msgstr[0] "%(min_cardinality)d отвечает или более"
-msgstr[1] "%(min_cardinality)d отвечают или более"
-
-#: survey/exporter/tex/question2tex.py:78
-msgid "excluding"
-msgstr "за исключением"
-
-#: survey/exporter/tex/question2tex.py:83
-#: survey/exporter/tex/question2tex.py:117
-#: survey/exporter/tex/question2tex.py:120
-msgid "and"
-msgstr "и"
-
-#: survey/exporter/tex/question2tex.py:114
-#: survey/exporter/tex/question2tex.py:115
-msgid "or"
-msgstr "или"
-
-#: survey/exporter/tex/question2tex.py:129
-msgid "Repartition of answers"
-msgstr "Перераспределение ответов"
-
-#: survey/exporter/tex/question2tex_chart.py:72
-msgid "Left blank"
-msgstr "Оставить пустым"
-
-#: survey/exporter/tex/question2tex_chart.py:117
-#: survey/exporter/tex/question2tex_sankey.py:40
-msgid "for the question"
-msgstr "для вопроса"
-
-#: survey/exporter/tex/question2tex_chart.py:127
-msgid "No answers for this question."
-msgstr "Нет ответов для этого вопроса."
-
-#: survey/exporter/tex/question2tex_raw.py:26
-msgid "Participant"
-msgstr "Участник"
-
-#  as in "opposite of right"
-#: survey/exporter/tex/question2tex_sankey.py:40
-msgid "left"
-msgstr "не правильно"
-
-#: survey/exporter/tex/question2tex_sankey.py:42
-msgid "in relation with the question"
-msgstr "в связи с вопросом"
-
-# as in "opposite of left"
-#: survey/exporter/tex/question2tex_sankey.py:44
-msgid "right"
-msgstr "правильно"
-
-#: survey/exporter/tex/survey2tex.py:32
-msgid "Cannot generate PDF, we need 'xelatex' to be installed."
-msgstr ""
-
-#: survey/exporter/tex/survey2tex.py:80
-msgid "We could not render a chart because the type"
-msgstr "Мы не смогли отобразить диаграмму, потому что тип"
-
-#: survey/exporter/tex/survey2tex.py:83
-msgid "is not a standard type nor the path to an importable valid Question2Tex child class. Choose between 'raw', 'sankey', 'pie', 'cloud', 'square', 'polar' or 'package.path.MyQuestion2TexCustomClass'"
-msgstr "не является стандартным типом или путем к импортируемому допустимому текстовому дочернему классу Question2Tex. Выбрать между 'raw', 'sankey', 'pie', 'cloud', 'square', 'polar' o 'package.path.MyQuestion2TexCustomClass'"
-
-#: survey/exporter/tex/survey2tex.py:157
-msgid "No questions to display in this survey."
-msgstr ""
-
-#: survey/exporter/tex/survey2tex.py:187
-msgid "Cannot export multiple PDF, choose only one."
-msgstr ""
-
-#: survey/exporter/tex/survey2tex.py:196
-#, python-format
-msgid "Error during PDF generation: %s"
-msgstr ""
-
-#: survey/exporter/tex/survey2tex.py:203
-msgid "Export to PDF"
-msgstr ""
 
 #: survey/models/answer.py:23
 msgid "Question"
