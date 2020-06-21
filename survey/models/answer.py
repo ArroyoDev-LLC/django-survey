@@ -12,13 +12,14 @@ from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from .question import Question
-from .response import Response
+import swapper
+
+Question, Response = swapper.get_model_names("survey", ["Question", "Response"])
 
 LOGGER = logging.getLogger(__name__)
 
 
-class Answer(models.Model):
+class BaseAnswer(models.Model):
 
     question = models.ForeignKey(Question, on_delete=models.CASCADE, verbose_name=_("Question"), related_name="answers")
     response = models.ForeignKey(Response, on_delete=models.CASCADE, verbose_name=_("Response"), related_name="answers")
@@ -26,15 +27,19 @@ class Answer(models.Model):
     updated = models.DateTimeField(_("Update date"), auto_now=True)
     body = models.TextField(_("Content"), blank=True, null=True)
 
+    class Meta:
+        abstract = True
+
     def __init__(self, *args, **kwargs):
+        QuestionModel = swapper.load_model("survey", "Question")
         try:
-            question = Question.objects.get(pk=kwargs["question_id"])
+            question = QuestionModel.objects.get(pk=kwargs["question_id"])
         except KeyError:
             question = kwargs.get("question")
         body = kwargs.get("body")
         if question and body:
             self.check_answer_body(question, body)
-        super(Answer, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
     @property
     def values(self):
@@ -57,7 +62,8 @@ class Answer(models.Model):
         return values
 
     def check_answer_body(self, question, body):
-        if question.type in [Question.RADIO, Question.SELECT, Question.SELECT_MULTIPLE]:
+        QuestionModel = swapper.load_model("survey", "Question")
+        if question.type in [QuestionModel.RADIO, QuestionModel.SELECT, QuestionModel.SELECT_MULTIPLE]:
             choices = question.get_clean_choices()
             if body:
                 if body[0] == "[":
@@ -75,3 +81,8 @@ class Answer(models.Model):
 
     def __str__(self):
         return "{} to '{}' : '{}'".format(self.__class__.__name__, self.question, self.body)
+
+
+class Answer(BaseAnswer):
+    class Meta(BaseAnswer.Meta):
+        swappable = swapper.swappable_setting("survey", "Answer")

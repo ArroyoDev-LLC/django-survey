@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-20 12:16+0000\n"
+"POT-Creation-Date: 2020-06-21 07:21+0000\n"
 "PO-Revision-Date: 2018-10-06 20:42+0000\n"
 "Last-Translator: Javier Ordóñez <>\n"
 "Language-Team: \n"
@@ -38,53 +38,53 @@ msgstr[1] "encuestas %(count)d se marcaron exitosamente como publicadas."
 msgid "Mark selected surveys as published"
 msgstr "Marca las encuestas seleccionadas como publicadas"
 
-#: survey/models/answer.py:23
+#: survey/models/answer.py:24
 msgid "Question"
 msgstr "Pregunta"
 
-#: survey/models/answer.py:24
+#: survey/models/answer.py:25
 msgid "Response"
 msgstr "Respuesta"
 
-#: survey/models/answer.py:25 survey/models/response.py:27
+#: survey/models/answer.py:26 survey/models/response.py:27
 msgid "Creation date"
 msgstr "Fecha de creación"
 
-#: survey/models/answer.py:26 survey/models/response.py:28
+#: survey/models/answer.py:27 survey/models/response.py:28
 msgid "Update date"
 msgstr "Fecha de actualización"
 
-#: survey/models/answer.py:27
+#: survey/models/answer.py:28
 msgid "Content"
 msgstr "Contenido"
 
-#: survey/models/category.py:12 survey/models/survey.py:27
+#: survey/models/category.py:13 survey/models/survey.py:27
 msgid "Name"
 msgstr "Nombre"
 
-#: survey/models/category.py:13 survey/models/question.py:80
+#: survey/models/category.py:14 survey/models/question.py:81
 #: survey/models/response.py:29
 msgid "Survey"
 msgstr "Encuesta"
 
-#: survey/models/category.py:14
+#: survey/models/category.py:15
 msgid "Display order"
 msgstr "Orden de presentación"
 
-#: survey/models/category.py:15 survey/models/survey.py:28
+#: survey/models/category.py:16 survey/models/survey.py:28
 msgid "Description"
 msgstr "Descripción"
 
-#: survey/models/category.py:19
+#: survey/models/category.py:20
 msgid "category"
 msgstr "categoría"
 
-#: survey/models/category.py:20
+#: survey/models/category.py:21
 msgid "categories"
 msgstr "categorías"
 
 # "if the question type" repeated in english original
-#: survey/models/question.py:23
+#: survey/models/question.py:24
 msgid ""
 "The choices field is only used if the question type\n"
 "if the question type is 'radio', 'select', or\n"
@@ -95,71 +95,71 @@ msgstr ""
 "es 'radio', 'select', o 'select multiple'. Proporciona una lista de opciones\n"
 "separadas por comas para esta pregunta."
 
-#: survey/models/question.py:63
+#: survey/models/question.py:64
 msgid "text (multiple line)"
 msgstr "texto (multilínea)"
 
-#: survey/models/question.py:64
+#: survey/models/question.py:65
 msgid "short text (one line)"
 msgstr "texto corto (una línea)"
 
-#: survey/models/question.py:65
+#: survey/models/question.py:66
 msgid "radio"
 msgstr "radio"
 
-#: survey/models/question.py:66
+#: survey/models/question.py:67
 msgid "select"
 msgstr "selecciona"
 
-#: survey/models/question.py:67
+#: survey/models/question.py:68
 msgid "Select Multiple"
 msgstr "Selección múltiple"
 
-#: survey/models/question.py:68
+#: survey/models/question.py:69
 msgid "Select Image"
 msgstr "Selecciona imagen"
 
-#: survey/models/question.py:69
+#: survey/models/question.py:70
 msgid "integer"
 msgstr "entero"
 
-#: survey/models/question.py:70
+#: survey/models/question.py:71
 msgid "float"
 msgstr ""
 
-#: survey/models/question.py:71
+#: survey/models/question.py:72
 msgid "date"
 msgstr ""
 
-#: survey/models/question.py:74
+#: survey/models/question.py:75
 msgid "Text"
 msgstr "Texto"
 
-#: survey/models/question.py:75
+#: survey/models/question.py:76
 msgid "Order"
 msgstr "Orden"
 
-#: survey/models/question.py:76
+#: survey/models/question.py:77
 msgid "Required"
 msgstr "Obligatorio"
 
-#: survey/models/question.py:78
+#: survey/models/question.py:79
 msgid "Category"
 msgstr "Categoría"
 
-#: survey/models/question.py:81
+#: survey/models/question.py:82
 msgid "Type"
 msgstr "Tipo"
 
-#: survey/models/question.py:82
+#: survey/models/question.py:83
 msgid "Choices"
 msgstr "Opciones"
 
-#: survey/models/question.py:85
+#: survey/models/question.py:86
 msgid "question"
 msgstr "pregunta"
 
-#: survey/models/question.py:86
+#: survey/models/question.py:87
 msgid "questions"
 msgstr "preguntas"
 

@@ -57,6 +57,7 @@ setuptools.setup(
         "pytz>=2018.9",
         "ordereddict>=1.1",
         "pyyaml>=4.2b1",
+        "swapper>=1.1.2",
     ],
     extras_require={
         "dev": [

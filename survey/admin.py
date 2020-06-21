@@ -42,5 +42,5 @@ class ResponseAdmin(admin.ModelAdmin):
 
 # admin.site.register(Question, QuestionInline)
 # admin.site.register(Category, CategoryInline)
-admin.site.register(Survey, SurveyAdmin)
-admin.site.register(Response, ResponseAdmin)
+# admin.site.register(Survey, SurveyAdmin)
+# admin.site.register(Response, ResponseAdmin)

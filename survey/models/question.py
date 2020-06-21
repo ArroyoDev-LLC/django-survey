@@ -8,8 +8,9 @@ from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
-from .category import Category
-from .survey import Survey
+import swapper
+
+Survey, Category = swapper.get_model_names("survey", ["Survey", "Category"])
 
 try:  # pragma: no cover
     from _collections import OrderedDict
@@ -47,7 +48,7 @@ class SortAnswer:
     ALPHANUMERIC = "alphanumeric"
 
 
-class Question(models.Model):
+class BaseQuestion(models.Model):
 
     TEXT = "text"
     SHORT_TEXT = "short-text"
@@ -85,11 +86,16 @@ class Question(models.Model):
         verbose_name = _("question")
         verbose_name_plural = _("questions")
         ordering = ("survey", "order")
+        abstract = True
+
+    @property
+    def concrete_model(self):
+        return swapper.load_model("survey", "Question")
 
     def save(self, *args, **kwargs):
-        if self.type in [Question.RADIO, Question.SELECT, Question.SELECT_MULTIPLE]:
+        if self.type in [self.concrete_model.RADIO, self.concrete_model.SELECT, self.concrete_model.SELECT_MULTIPLE]:
             validate_choices(self.choices)
-        super(Question, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def get_clean_choices(self):
         """ Return split and stripped list of choices with no null values. """
@@ -125,7 +131,8 @@ class Question(models.Model):
     @staticmethod
     def standardize_list(string_list, group_by_letter_case=None, group_by_slugify=None):
         """ Return a list of standardized string from a csv string.."""
-        return [Question.standardize(strng, group_by_letter_case, group_by_slugify) for strng in string_list]
+        concrete = swapper.load_model("survey", "Question")
+        return [concrete.standardize(strng, group_by_letter_case, group_by_slugify) for strng in string_list]
 
     def answers_cardinality(
         self,
@@ -164,9 +171,9 @@ class Question(models.Model):
             filter = []
             standardized_filter = []
         else:
-            standardized_filter = Question.standardize_list(filter, group_by_letter_case, group_by_slugify)
+            standardized_filter = self.concrete_model.standardize_list(filter, group_by_letter_case, group_by_slugify)
         if other_question is not None:
-            if not isinstance(other_question, Question):
+            if not isinstance(other_question, self.concrete_model):
                 msg = "Question.answer_cardinality expect a 'Question' for "
                 msg += "the 'other_question' parameter and got"
                 msg += " '{}' (a '{}')".format(other_question, other_question.__class__.__name__)
@@ -328,9 +335,9 @@ class Question(models.Model):
 
     def __get_cardinality_value(self, value, group_by_letter_case, group_by_slugify, group_together):
         """ Return the value we should use for cardinality. """
-        value = Question.standardize(value, group_by_letter_case, group_by_slugify)
+        value = self.concrete_model.standardize(value, group_by_letter_case, group_by_slugify)
         for key, values in list(group_together.items()):
-            grouped_values = Question.standardize_list(values, group_by_letter_case, group_by_slugify)
+            grouped_values = self.concrete_model.standardize_list(values, group_by_letter_case, group_by_slugify)
             if value in grouped_values:
                 value = key
         return value
@@ -380,8 +387,15 @@ class Question(models.Model):
         return choices_tuple
 
     def __str__(self):
-        msg = "Question '{}' ".format(self.text)
+        concrete_fqdn = swapper.get_model_name("survey", "Question")
+        app_name, concrete_name = swapper.split(concrete_fqdn)
+        msg = concrete_name + f" '{self.text}'"
         if self.required:
             msg += "(*) "
         msg += "{}".format(self.get_clean_choices())
         return msg
+
+
+class Question(BaseQuestion):
+    class Meta(BaseQuestion.Meta):
+        swappable = swapper.swappable_setting("survey", "Question")
