@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-21 07:21+0000\n"
+"POT-Creation-Date: 2020-06-21 08:01+0000\n"
 "PO-Revision-Date: 2018-04-09 00:52+0000\n"
 "Last-Translator: Zhu Sheng Li <digglife@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,11 @@ msgstr "问题"
 msgid "Response"
 msgstr "回答"
 
-#: survey/models/answer.py:26 survey/models/response.py:27
+#: survey/models/answer.py:26 survey/models/response.py:28
 msgid "Creation date"
 msgstr "创建日期"
 
-#: survey/models/answer.py:27 survey/models/response.py:28
+#: survey/models/answer.py:27 survey/models/response.py:29
 msgid "Update date"
 msgstr "更新日期"
 
@@ -58,12 +58,12 @@ msgstr "更新日期"
 msgid "Content"
 msgstr "内容"
 
-#: survey/models/category.py:13 survey/models/survey.py:27
+#: survey/models/category.py:13 survey/models/survey.py:28
 msgid "Name"
 msgstr "名字"
 
 #: survey/models/category.py:14 survey/models/question.py:81
-#: survey/models/response.py:29
+#: survey/models/response.py:30
 msgid "Survey"
 msgstr "问卷"
 
@@ -71,7 +71,7 @@ msgstr "问卷"
 msgid "Display order"
 msgstr "显示顺序"
 
-#: survey/models/category.py:16 survey/models/survey.py:28
+#: survey/models/category.py:16 survey/models/survey.py:29
 msgid "Description"
 msgstr "描述"
 
@@ -159,67 +159,67 @@ msgstr "问题"
 msgid "questions"
 msgstr "问题"
 
-#: survey/models/response.py:30
+#: survey/models/response.py:31
 msgid "User"
 msgstr "用户"
 
-#: survey/models/response.py:31
+#: survey/models/response.py:32
 msgid "Interview unique identifier"
 msgstr "问卷的唯一标识"
 
-#: survey/models/response.py:34
+#: survey/models/response.py:35
 msgid "Set of answers to surveys"
 msgstr "问卷的几组回答"
 
-#: survey/models/response.py:35
+#: survey/models/response.py:36
 msgid "Sets of answers to surveys"
 msgstr "问卷的几组回答"
 
-#: survey/models/survey.py:22
+#: survey/models/survey.py:23
 msgid "By question"
 msgstr "按问题显示"
 
-#: survey/models/survey.py:23
+#: survey/models/survey.py:24
 msgid "By category"
 msgstr "按类别显示"
 
-#: survey/models/survey.py:24
+#: survey/models/survey.py:25
 msgid "All in one page"
 msgstr "综合显示"
 
-#: survey/models/survey.py:29
+#: survey/models/survey.py:30
 msgid "Users can see it and answer it"
 msgstr "用户可以浏览和回答"
 
-#: survey/models/survey.py:30
+#: survey/models/survey.py:31
 msgid "Only authenticated users can see it and answer it"
 msgstr "只有认证用户可以浏览和回答"
 
-#: survey/models/survey.py:31
+#: survey/models/survey.py:32
 msgid "Users can edit their answers afterwards"
 msgstr "用户可以随后编辑他们的答案"
 
-#: survey/models/survey.py:33
+#: survey/models/survey.py:34
 msgid "Display method"
 msgstr "显示方式"
 
-#: survey/models/survey.py:35
+#: survey/models/survey.py:36
 msgid "Template"
 msgstr "模板"
 
-#: survey/models/survey.py:36
+#: survey/models/survey.py:37
 msgid "Publication date"
 msgstr "发布日期"
 
-#: survey/models/survey.py:37
+#: survey/models/survey.py:38
 msgid "Expiration date"
 msgstr "截止日期"
 
-#: survey/models/survey.py:40
+#: survey/models/survey.py:41
 msgid "survey"
 msgstr "问卷"
 
-#: survey/models/survey.py:41
+#: survey/models/survey.py:42
 msgid "surveys"
 msgstr "问卷"
 

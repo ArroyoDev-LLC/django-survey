@@ -4,7 +4,9 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-from .survey import Survey
+import swapper
+
+Survey = swapper.get_model_name("survey", "Survey")
 
 try:
     from django.conf import settings
@@ -17,8 +19,7 @@ except (ImportError, AttributeError):
     user_model = User
 
 
-class Response(models.Model):
-
+class BaseResponse(models.Model):
     """
         A Response object is a collection of questions and answers with a
         unique interview uuid.
@@ -33,8 +34,15 @@ class Response(models.Model):
     class Meta:
         verbose_name = _("Set of answers to surveys")
         verbose_name_plural = _("Sets of answers to surveys")
+        abstract = True
 
     def __str__(self):
-        msg = "Response to {} by {}".format(self.survey, self.user)
+        _, concrete_name = swapper.split(swapper.get_model_name("survey", "Response"))
+        msg = "{} to {} by {}".format(concrete_name, self.survey, self.user)
         msg += " on {}".format(self.created)
         return msg
+
+
+class Response(BaseResponse):
+    class Meta(BaseResponse.Meta):
+        swappable = swapper.swappable_setting("survey", "Response")

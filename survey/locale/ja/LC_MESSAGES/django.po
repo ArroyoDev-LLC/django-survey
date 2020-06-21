@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-21 07:21+0000\n"
+"POT-Creation-Date: 2020-06-21 08:01+0000\n"
 "PO-Revision-Date: 2018-04-09 00:52+0000\n"
 "Last-Translator: b'  <nsuzue@me.com>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -45,11 +45,11 @@ msgstr "質問"
 msgid "Response"
 msgstr "反応"
 
-#: survey/models/answer.py:26 survey/models/response.py:27
+#: survey/models/answer.py:26 survey/models/response.py:28
 msgid "Creation date"
 msgstr "作成日"
 
-#: survey/models/answer.py:27 survey/models/response.py:28
+#: survey/models/answer.py:27 survey/models/response.py:29
 msgid "Update date"
 msgstr "更新日"
 
@@ -57,12 +57,12 @@ msgstr "更新日"
 msgid "Content"
 msgstr "内容"
 
-#: survey/models/category.py:13 survey/models/survey.py:27
+#: survey/models/category.py:13 survey/models/survey.py:28
 msgid "Name"
 msgstr "名前"
 
 #: survey/models/category.py:14 survey/models/question.py:81
-#: survey/models/response.py:29
+#: survey/models/response.py:30
 msgid "Survey"
 msgstr "調査"
 
@@ -70,7 +70,7 @@ msgstr "調査"
 msgid "Display order"
 msgstr "表示順"
 
-#: survey/models/category.py:16 survey/models/survey.py:28
+#: survey/models/category.py:16 survey/models/survey.py:29
 msgid "Description"
 msgstr "定義"
 
@@ -158,73 +158,73 @@ msgstr "質問"
 msgid "questions"
 msgstr "質問"
 
-#: survey/models/response.py:30
+#: survey/models/response.py:31
 msgid "User"
 msgstr "ユーザー"
 
-#: survey/models/response.py:31
+#: survey/models/response.py:32
 msgid "Interview unique identifier"
 msgstr "インタービューのユニークな識別子"
 
-#: survey/models/response.py:34
+#: survey/models/response.py:35
 msgid "Set of answers to surveys"
 msgstr "調査に対する回答集"
 
-#: survey/models/response.py:35
+#: survey/models/response.py:36
 msgid "Sets of answers to surveys"
 msgstr "調査に対する回答セット"
 
-#: survey/models/survey.py:22
+#: survey/models/survey.py:23
 #, fuzzy
 #| msgid "question"
 msgid "By question"
 msgstr "質問"
 
-#: survey/models/survey.py:23
+#: survey/models/survey.py:24
 #, fuzzy
 #| msgid "category"
 msgid "By category"
 msgstr "分類"
 
-#: survey/models/survey.py:24
+#: survey/models/survey.py:25
 msgid "All in one page"
 msgstr ""
 
-#: survey/models/survey.py:29
+#: survey/models/survey.py:30
 msgid "Users can see it and answer it"
 msgstr "すべてのユーザーが閲覧・回答できる"
 
-#: survey/models/survey.py:30
+#: survey/models/survey.py:31
 msgid "Only authenticated users can see it and answer it"
 msgstr "認証されたユーザーのみ閲覧・回答できる"
 
-#: survey/models/survey.py:31
+#: survey/models/survey.py:32
 msgid "Users can edit their answers afterwards"
 msgstr "ユーザーは後で回答を編集できます"
 
-#: survey/models/survey.py:33
+#: survey/models/survey.py:34
 #, fuzzy
 #| msgid "Display order"
 msgid "Display method"
 msgstr "表示順"
 
-#: survey/models/survey.py:35
+#: survey/models/survey.py:36
 msgid "Template"
 msgstr "テンプレート"
 
-#: survey/models/survey.py:36
+#: survey/models/survey.py:37
 msgid "Publication date"
 msgstr ""
 
-#: survey/models/survey.py:37
+#: survey/models/survey.py:38
 msgid "Expiration date"
 msgstr ""
 
-#: survey/models/survey.py:40
+#: survey/models/survey.py:41
 msgid "survey"
 msgstr "調査"
 
-#: survey/models/survey.py:41
+#: survey/models/survey.py:42
 msgid "surveys"
 msgstr "調査"
 

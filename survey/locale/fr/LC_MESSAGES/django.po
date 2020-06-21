@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-06-21 07:21+0000\n"
+"POT-Creation-Date: 2020-06-21 08:01+0000\n"
 "PO-Revision-Date: 2020-02-23 14:44+0000\n"
 "Last-Translator: b'  <>'\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,11 @@ msgstr "Question"
 msgid "Response"
 msgstr "Réponse"
 
-#: survey/models/answer.py:26 survey/models/response.py:27
+#: survey/models/answer.py:26 survey/models/response.py:28
 msgid "Creation date"
 msgstr "Date de création"
 
-#: survey/models/answer.py:27 survey/models/response.py:28
+#: survey/models/answer.py:27 survey/models/response.py:29
 msgid "Update date"
 msgstr "Date de mise à jour"
 
@@ -58,12 +58,12 @@ msgstr "Date de mise à jour"
 msgid "Content"
 msgstr "Contenu"
 
-#: survey/models/category.py:13 survey/models/survey.py:27
+#: survey/models/category.py:13 survey/models/survey.py:28
 msgid "Name"
 msgstr "Nom"
 
 #: survey/models/category.py:14 survey/models/question.py:81
-#: survey/models/response.py:29
+#: survey/models/response.py:30
 msgid "Survey"
 msgstr "Sondage"
 
@@ -71,7 +71,7 @@ msgstr "Sondage"
 msgid "Display order"
 msgstr "Ordre d'affichage"
 
-#: survey/models/category.py:16 survey/models/survey.py:28
+#: survey/models/category.py:16 survey/models/survey.py:29
 msgid "Description"
 msgstr "Description"
 
@@ -159,71 +159,71 @@ msgstr "question"
 msgid "questions"
 msgstr "questions"
 
-#: survey/models/response.py:30
+#: survey/models/response.py:31
 msgid "User"
 msgstr "Utilisateur"
 
-#: survey/models/response.py:31
+#: survey/models/response.py:32
 msgid "Interview unique identifier"
 msgstr "Identifiant unique de la réponse"
 
-#: survey/models/response.py:34
+#: survey/models/response.py:35
 msgid "Set of answers to surveys"
 msgstr "Ensemble de réponse aux sondages"
 
-#: survey/models/response.py:35
+#: survey/models/response.py:36
 msgid "Sets of answers to surveys"
 msgstr "Ensembles de réponse aux sondages"
 
-#: survey/models/survey.py:22
+#: survey/models/survey.py:23
 #, fuzzy
 #| msgid "question"
 msgid "By question"
 msgstr "Par question"
 
-#: survey/models/survey.py:23
+#: survey/models/survey.py:24
 #, fuzzy
 #| msgid "category"
 msgid "By category"
 msgstr "Par catégorie"
 
-#: survey/models/survey.py:24
+#: survey/models/survey.py:25
 msgid "All in one page"
 msgstr "Tout dans une même page"
 
-#: survey/models/survey.py:29
+#: survey/models/survey.py:30
 msgid "Users can see it and answer it"
 msgstr "Les utilisateurs peuvent le voir et y répondre"
 
-#: survey/models/survey.py:30
+#: survey/models/survey.py:31
 msgid "Only authenticated users can see it and answer it"
 msgstr "Seuls les utilisateurs authentifiés peuvent le voir et y répondre"
 
-#: survey/models/survey.py:31
+#: survey/models/survey.py:32
 msgid "Users can edit their answers afterwards"
 msgstr "Les utilisateurs peuvent modifier leur réponse"
 
-#: survey/models/survey.py:33
+#: survey/models/survey.py:34
 msgid "Display method"
 msgstr "Méthode d'affichage"
 
-#: survey/models/survey.py:35
+#: survey/models/survey.py:36
 msgid "Template"
 msgstr "Modèle"
 
-#: survey/models/survey.py:36
+#: survey/models/survey.py:37
 msgid "Publication date"
 msgstr "Date de publication"
 
-#: survey/models/survey.py:37
+#: survey/models/survey.py:38
 msgid "Expiration date"
 msgstr "Date de suppression"
 
-#: survey/models/survey.py:40
+#: survey/models/survey.py:41
 msgid "survey"
 msgstr "sondage"
 
-#: survey/models/survey.py:41
+#: survey/models/survey.py:42
 msgid "surveys"
 msgstr "sondages"
 

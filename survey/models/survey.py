@@ -7,13 +7,14 @@ from django.urls import reverse
 from django.utils.timezone import now
 from django.utils.translation import gettext_lazy as _
 
+import swapper
+
 
 def in_duration_day():
     return now() + timedelta(days=settings.DEFAULT_SURVEY_PUBLISHING_DURATION)
 
 
-class Survey(models.Model):
-
+class BaseSurvey(models.Model):
     ALL_IN_ONE_PAGE = 0
     BY_QUESTION = 1
     BY_CATEGORY = 2
@@ -39,6 +40,7 @@ class Survey(models.Model):
     class Meta:
         verbose_name = _("survey")
         verbose_name_plural = _("surveys")
+        abstract = True
 
     def __str__(self):
         return str(self.name)
@@ -65,3 +67,8 @@ class Survey(models.Model):
 
     def is_all_in_one_page(self):
         return self.display_method == self.ALL_IN_ONE_PAGE
+
+
+class Survey(BaseSurvey):
+    class Meta(BaseSurvey.Meta):
+        swappable = swapper.swappable_setting("survey", "Survey")
