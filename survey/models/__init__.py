@@ -4,10 +4,10 @@
 Permit to import everything from survey.models without knowing the details.
 """
 
-from .answer import Answer
-from .category import Category
-from .question import Question
-from .response import Response
-from .survey import Survey
+import swapper
 
-__all__ = ["Category", "Answer", "Category", "Response", "Survey", "Question"]
+Category, Answer, Response, Survey, Question = swapper.get_model_names(
+    "survey", ["Category", "Answer", "Response", "Survey", "Question"]
+)
+
+__all__ = ["Category", "Answer", "Response", "Survey", "Question"]
